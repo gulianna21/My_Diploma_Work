@@ -1,0 +1,18 @@
+﻿  Crossover.cpp
+  Mutation.cpp
+c:\users\it\source\repos\project1\project1\mutation.cpp(12): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\it\source\repos\project1\project1\mutation.cpp(103): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\it\source\repos\project1\project1\mutation.cpp(121): warning C4018: <=: несоответствие типов со знаком и без знака
+c:\users\it\source\repos\project1\project1\mutation.cpp(132): warning C4101: minCiti2: неиспользованная локальная переменная
+c:\users\it\source\repos\project1\project1\mutation.cpp(132): warning C4101: maxCiti1: неиспользованная локальная переменная
+c:\users\it\source\repos\project1\project1\mutation.cpp(132): warning C4101: maxCiti2: неиспользованная локальная переменная
+c:\users\it\source\repos\project1\project1\mutation.cpp(132): warning C4101: minCiti1: неиспользованная локальная переменная
+c:\users\it\source\repos\project1\project1\mutation.cpp(216): warning C4018: <: несоответствие типов со знаком и без знака
+  Selection.cpp
+  Set.cpp
+c:\users\it\source\repos\project1\project1\set.cpp(75): warning C4018: <: несоответствие типов со знаком и без знака
+  Source.cpp
+c:\users\it\source\repos\project1\project1\source.cpp(25): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\it\source\repos\project1\project1\source.cpp(32): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+  Project1.vcxproj -> C:\Users\IT\source\repos\Project1\Debug\Project1.exe
