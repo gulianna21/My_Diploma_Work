@@ -4,6 +4,7 @@
 #include "Mutation.h"
 #include "Crossover.h"
 #include "Selection.h"
+#include <algorithm>
 
 int main()
 {
@@ -14,7 +15,6 @@ int main()
   std::vector<std::vector<int> > newDistance = qwe.generatedWays(countIteration, countIteration);
   int countPopulation = 0;
 
-
   while (countIteration - 5) 
   {
     /*if (countPopulation)
@@ -22,7 +22,8 @@ int main()
       cout << endl;
       Crossover cross;
       cout << "Crossover!" << endl;
-      newPopulation = cross.createNewPopulationChild(newPopulation);
+      //newPopulation = cross.cyclicÑrossover(newPopulation);
+      newPopulation = cross.changeÑrossover(newPopulation);
     //}
 
     cout << endl;
@@ -49,6 +50,18 @@ int main()
     if (newPopulation.size() == 0)
       break;
     countIteration--;
+   /* if ((countIteration-5) <= 0)
+    {
+      // âûáîðêà ìèíèìàëüíîãî ïóòè èç ïîëó÷èâøåéñÿ ïîïóëÿöèè.
+      Mutation a;
+      int mins=256,c;
+      for (int i = 0; i < newPopulation.size(); i++)
+      {
+        c = a.findLength(newDistance, newPopulation[i]);
+        mins = min(mins, c);
+      }
+      cout << " Min: " << mins << endl;
+    }*/
     countPopulation++;
   }
   cin.get();
