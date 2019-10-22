@@ -20,6 +20,10 @@ public:
 
   std::vector<int> createNewChildForChange—rossover(std::vector<std::vector<int>> pair, int point);
 
+  std::vector<int> MBSmethod(std::vector<std::vector<int>> waysCountry, std::vector<std::vector<int>> pair);
+
+  int getNearMin(std::vector<std::vector<int>> waysCountry, int number, std::vector<int> parents);
+
 private:
   int crossCount;
 };

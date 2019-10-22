@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "Crossover.h"
+#include <algorithm>
 
 Crossover::Crossover()
 {
@@ -111,4 +112,45 @@ std::vector<int> Crossover::createNewChildForChange—rossover(std::vector<std::ve
   }
 
   return child;
+}
+
+std::vector<int> Crossover::MBSmethod(std::vector<std::vector<int>> waysCountry, std::vector<std::vector<int>> pair)
+{
+  std::vector<int> child;
+  int point2;
+  int point1 = rand() % (pair[0].size() - 3) + 1;
+  if (point1 == pair[0].size() - 2)
+  {
+    point2 = pair[0].size() - 1;
+  }
+  else
+  {
+    point2 = point1 + rand() % (pair[0].size() - point1 - 2) + 1;
+  }
+
+  for (int i = 0; i < point1; i++)
+  {
+    child.push_back(pair[0][i]);
+  }
+
+  for (int j = point1; j < point2; j++)
+  {
+    int town = getNearMin(waysCountry, j,pair[0]);
+    if (NotHave(child, pair[0][j]))
+    {
+      child.push_back(town);
+    }
+  }
+
+  return std::vector<int>();
+}
+
+int Crossover::getNearMin(std::vector<std::vector<int>> waysCountry, int number, std::vector<int> parents)
+{
+  int minimum = parents[number];
+  for (int i = number + 1; i < parents.size(); i++)
+  {
+    minimum = min(minimum,parents[i]);
+  }
+  return minimum;
 }
