@@ -23,7 +23,11 @@ int main()
       Crossover cross;
       cout << "Crossover!" << endl;
       //newPopulation = cross.cyclicÑrossover(newPopulation);
-      newPopulation = cross.changeÑrossover(newPopulation);
+      //newPopulation = cross.changeÑrossover(newPopulation);
+
+      /// TEST
+      newPopulation = cross.mainMethod(newDistance, newPopulation);
+      /////////////////////////////////////////////////////
     //}
 
     cout << endl;
@@ -64,7 +68,9 @@ int main()
     }*/
     countPopulation++;
   }
+
   cin.get();
   cin.get();
+
   return 0;
 }

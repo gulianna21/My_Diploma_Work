@@ -12,7 +12,7 @@ public:
 
   std::vector<int> createNewChildForCyclic—rossover(std::vector<std::vector<int>> pair);
 
-  template <class T, class X> bool NotHave(T child, X index);
+  template <class T, class X> bool Contains(T child, X index);
 
   std::vector<std::vector<int> > cyclic—rossover(std::vector<std::vector<int>> waysCountry);
 
@@ -22,7 +22,9 @@ public:
 
   std::vector<int> MBSmethod(std::vector<std::vector<int>> waysCountry, std::vector<std::vector<int>> pair);
 
-  int getNearMin(std::vector<std::vector<int>> waysCountry, int number, std::vector<int> parents);
+  int getNearMin(std::vector<std::vector<int>> waysCountry, int point, std::vector<int> parents, std::vector<int> child);
+
+  std::vector<std::vector<int> > mainMethod(std::vector<std::vector<int>> waysCountry, std::vector<std::vector<int>> population);
 
 private:
   int crossCount;
